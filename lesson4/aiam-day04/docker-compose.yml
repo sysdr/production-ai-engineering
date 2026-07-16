@@ -1,0 +1,14 @@
+services:
+  ratelimit:
+    build: .
+    image: aiam-day04-ratelimit
+    container_name: aiam-day04
+    ports:
+      - "8083:8083"
+    environment:
+      BUDGET_USD: "10.0"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8083/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
