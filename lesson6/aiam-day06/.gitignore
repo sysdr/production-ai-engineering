@@ -1,0 +1,35 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Istio and service-mesh artifacts
+istio-*/
+*istio*.yaml
+*istio*.yml
+
+# Build / dist
+build/
+dist/
+
+# Logs & local overrides
+*.log
+docker-compose.override.yml
+
+# OS
+.DS_Store
