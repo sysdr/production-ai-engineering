@@ -1,0 +1,14 @@
+services:
+  security:
+    build: .
+    image: aiam-day05-security
+    container_name: aiam-day05
+    ports:
+      - "8084:8084"
+    environment:
+      HMAC_SECRET: "day05-secret"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8084/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
