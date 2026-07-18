@@ -1,0 +1,41 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Node / frontend caches
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Istio / service mesh local artifacts
+istio-*/ 
+*.istio.yaml
+istio.yaml
+.istioctl/
+
+# Build / dist
+build/
+dist/
+*.egg
+
+# Logs & local overrides
+*.log
+docker-compose.override.yml
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
